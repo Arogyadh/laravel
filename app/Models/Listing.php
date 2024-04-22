@@ -32,4 +32,10 @@ class Listing extends Model
             return static::query(); // Return all listings if no tag is provided
         }
     }
+
+    //Relationship to user
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
 }
